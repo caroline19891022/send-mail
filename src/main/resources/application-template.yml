@@ -1,0 +1,38 @@
+spring.mail:
+  host: smtp.163.com
+  username: 123@163.com
+  password: 123456
+mailto:
+  client[0]:
+    nickname: 甲
+    mailAddress: 111@163.com
+    group: A组
+  client[1]:
+    nickname: 乙
+    mailAddress: 222@163.com
+    group: B组
+  client[2]:
+    nickname: 丙
+    mailAddress: 333@163.com
+    group: C组
+  manager[0]:
+    nickname: 丁哥
+    mailAddress: 444@163.com
+  manager[1]:
+    nickname: 王姐
+    mailAddress: 555@163.com
+
+groupset:
+  group[0]:
+    name: A组
+    member[0]: 小a
+    member[1]: 小b
+    member[2]: 小c
+    member[3]: 小d
+  group[1]:
+    name: B组
+    member[0]: 小e
+    member[1]: 小f
+  group[2]:
+    name: C组
+    member[0]: 小g

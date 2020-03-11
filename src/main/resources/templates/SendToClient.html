@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        table.dataintable {
+            margin-top: 15px;
+            border-collapse: collapse;
+            border: 1px solid #aaa;
+            width: 100%;
+        }
+
+        table.dataintable th {
+            vertical-align: baseline;
+            padding: 10px 10px 10px 10px;
+            background-color: #3F3F3F;
+            border: 1px solid #3F3F3F;
+            text-align: left;
+            color: #fff;
+        }
+
+        table.dataintable td {
+            vertical-align: text-top;
+            padding: 9px 9px 9px 9px;
+            border: 1px solid #aaa;
+        }
+
+        table.dataintable tr:nth-child(odd) {
+            background-color: #F5F5F5;
+        }
+
+        table.dataintable tr:nth-child(even) {
+            background-color: #fff;
+        }
+
+
+    </style>
+</head>
+<body>
+<h3 th:text="${nickname} + '：'"></h3>
+<h4 th:text="${groupName} + ${date} + '工作情况如下：'"></h4>
+<table class="dataintable">
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>工作内容</th>
+        <th>工作量</th>
+        <th>备注</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row:${sendList}">
+        <td th:text="${row.name}"></td>
+        <td th:text="${row.content}"></td>
+        <td th:text="${row.getHours()}"></td>
+        <td th:text="${row.getRemark()}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
