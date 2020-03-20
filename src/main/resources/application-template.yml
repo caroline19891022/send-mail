@@ -36,3 +36,8 @@ groupset:
   group[2]:
     name: C组
     member[0]: 小g
+sendset:
+  sendToClient: true
+  sendToManager: true
+  filePath: F:\download\还消组远程工作量统计-3月.xls
+  sendDateEarly: 0
